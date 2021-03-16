@@ -22,4 +22,8 @@ class Task extends Model
                 ->select('visibility')
                 ->where('id', '=', $this->visibility);
     }
+
+    public function getDueDateAttribute($value) {
+        return date('M j, Y', strtotime($value));
+    }
 }

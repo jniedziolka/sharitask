@@ -26,6 +26,6 @@ class CreateTaskVisibilityDictionary extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('task_visibility_dictionary');
+        Schema::dropIfExists('dic_task_visibilities');
     }
 }

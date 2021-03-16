@@ -19,7 +19,7 @@ class CreateTasksTable extends Migration
             $table->unsignedInteger('status');
             $table->string('visibility');
             $table->string('description');
-            $table->boolean('is_completed');
+            $table->date('due_date');
             $table->timestamps();
         });
 

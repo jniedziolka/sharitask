@@ -26,6 +26,6 @@ class CreateTaskStatusesDictionary extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('task_statuses_dictionary');
+        Schema::dropIfExists('dic_task_statuses');
     }
 }
