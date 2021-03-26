@@ -31,7 +31,17 @@ export default {
     },
     methods: {
         submit() {
-            this.$inertia.post('/login', this.form);
+            console.log("STORE", this.$store);
+            this.$inertia.post('/login', this.form, {
+                onSuccess: ({ props }) => {
+                    store.commit('setUserInfo', {
+                        first_name: props.user.first_name,
+                        last_name: props.user.last_name,
+                        nickname: props.user.nickname,
+                        email: props.user.email
+                    })
+                }
+            });
         }
     }
 }

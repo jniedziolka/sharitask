@@ -20,16 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6904d355-cd04-4384-a819-58bfdfdbe144" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/js/Components/Tasks/NewTaskButton.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/Components/Tasks/NewTaskModal.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/Store/Modules/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/Store/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TaskController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Task.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Task.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_12_211236_create_tasks_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_12_211236_create_tasks_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_12_212827_create_task_statuses_dictionary.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_12_212827_create_task_statuses_dictionary.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_12_213004_create_task_visibility_dictionary.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_12_213004_create_task_visibility_dictionary.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/Components/AppHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Components/AppHeader.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/HandleInertiaRequests.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/HandleInertiaRequests.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Components/Auth/LoginForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Components/Auth/LoginForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +172,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../DALKIA/invisoFuel" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -206,7 +204,10 @@
       <workItem from="1615582544431" duration="2434000" />
       <workItem from="1615753695970" duration="3767000" />
       <workItem from="1615843227005" duration="1537000" />
-      <workItem from="1615926843535" duration="4596000" />
+      <workItem from="1615926843535" duration="4765000" />
+      <workItem from="1615966385855" duration="9626000" />
+      <workItem from="1616019168137" duration="2206000" />
+      <workItem from="1616062468515" duration="618000" />
     </task>
     <servers />
   </component>
@@ -230,10 +231,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="703" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.1.1920.1040@0.0.1920.1040" timestamp="1615758259213" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1615362998482">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1616068111655">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.1.1920.1040@0.0.1920.1040" timestamp="1615362998482" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.1.1920.1040@0.0.1920.1040" timestamp="1616068111655" />
     <state x="667" y="253" width="585" height="592" key="find.popup" timestamp="1615759022600">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
