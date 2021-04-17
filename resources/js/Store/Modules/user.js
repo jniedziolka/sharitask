@@ -3,7 +3,7 @@ const userModule = {
         first_name: '',
         last_name: '',
         nickname: '',
-        email: ''
+        email: '',
     }),
     mutations: {
         setUserInfo (state, payload) {
@@ -14,7 +14,6 @@ const userModule = {
         }
     },
     actions: {
-
     },
     getters: {
 

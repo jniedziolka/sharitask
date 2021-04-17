@@ -43,7 +43,11 @@
         },
         methods: {
             submit() {
-                this.$inertia.post('/task', this.form)
+                this.$inertia.post('/task', this.form, {
+                    onSuccess: () => {
+                       this.$emit('close');
+                    }
+                })
             }
         }
     }

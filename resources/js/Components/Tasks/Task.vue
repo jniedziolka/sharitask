@@ -1,8 +1,8 @@
 <template>
     <div class="bg-gray-200 rounded p-4">
         <div class="flex justify-between">
-            <h2 class="text-3xl text-gray-800 mb-1">Do the laundry</h2>
-            <span class="text-gray-400">Mar 12, 2021</span>
+            <h2 class="text-3xl text-gray-800 mb-1">{{ title }}</h2>
+            <span class="text-gray-400">{{ due_date }}</span>
         </div>
         <span class="text-md block text-gray-400">Uncompleted</span>
         <span class="text-sm block mb-4 text-gray-400">Private</span>
@@ -19,6 +19,6 @@
 
 <script>
     export default {
-
+        props: ['title', 'due_date', 'status', 'visibility']
     }
 </script>

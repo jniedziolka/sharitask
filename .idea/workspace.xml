@@ -20,14 +20,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6904d355-cd04-4384-a819-58bfdfdbe144" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/js/Store/Modules/user.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/Store/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/HandleInertiaRequests.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/HandleInertiaRequests.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TaskController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Task.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Task.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/Components/Auth/LoginForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Components/Auth/LoginForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Components/Tasks/NewTaskModal.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Components/Tasks/NewTaskModal.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Components/Tasks/Task.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Components/Tasks/Task.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Components/Tasks/TaskList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Components/Tasks/TaskList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Store/Modules/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Store/Modules/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Store/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +48,17 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/resources/js/app.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/resources/js/Components/Auth/LoginForm.vue" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/Http/Controllers/TaskController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/resources/js/Components/Tasks/NewTaskModal.vue" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/resources/js/Store/Modules/task.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/resources/js/Store/Modules/user.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/routes/api.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/resources/js/Components/Tasks/TaskList.vue" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -172,11 +191,14 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../DALKIA/invisoFuel" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu\home\kuba\sharitask" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Portfolio Projects\sharitask\resources\js\Components\Auth" />
     </key>
@@ -208,6 +230,15 @@
       <workItem from="1615966385855" duration="9626000" />
       <workItem from="1616019168137" duration="2206000" />
       <workItem from="1616062468515" duration="618000" />
+      <workItem from="1616794485628" duration="6090000" />
+      <workItem from="1617097307363" duration="121000" />
+      <workItem from="1617829163641" duration="2289000" />
+      <workItem from="1617865270256" duration="217000" />
+      <workItem from="1618325877862" duration="1343000" />
+      <workItem from="1618429178239" duration="5396000" />
+      <workItem from="1618568219517" duration="267000" />
+      <workItem from="1618568567576" duration="2855000" />
+      <workItem from="1618671515486" duration="6790000" />
     </task>
     <servers />
   </component>
@@ -225,23 +256,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="703" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1615758259213">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="703" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.1.1920.1040@0.0.1920.1040" timestamp="1615758259213" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1616068111655">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.1.1920.1040@0.0.1920.1040" timestamp="1616068111655" />
-    <state x="667" y="253" width="585" height="592" key="find.popup" timestamp="1615759022600">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="667" y="253" width="585" height="592" key="find.popup/0.0.1920.1040/1920.1.1920.1040@0.0.1920.1040" timestamp="1615759022600" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1615758938715">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.1.1920.1040@0.0.1920.1040" timestamp="1615758938715" />
   </component>
 </project>
