@@ -31,5 +31,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function() {
-   Route::post('/task', [TaskController::class, 'store']);
+   Route::post('/task', [TaskController::class, 'store'])->name('task.store');
+   Route::delete('/task/{id}', [TaskController::class, 'destroy'])->name('task.destroy');
 });

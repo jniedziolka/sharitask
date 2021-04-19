@@ -23,8 +23,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TaskController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/Components/Tasks/NewTaskModal.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Components/Tasks/NewTaskModal.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/Store/Modules/task.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Store/Modules/task.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Components/Tasks/Task.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Components/Tasks/Task.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Components/Tasks/TaskList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Components/Tasks/TaskList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,7 +232,8 @@
       <workItem from="1618568219517" duration="267000" />
       <workItem from="1618568567576" duration="2855000" />
       <workItem from="1618671515486" duration="15319000" />
-      <workItem from="1618776724335" duration="5968000" />
+      <workItem from="1618776724335" duration="6146000" />
+      <workItem from="1618815879010" duration="8091000" />
     </task>
     <servers />
   </component>
@@ -246,5 +251,22 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/resources/js/Components/Tasks/Task.vue</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/resources/js/Components/Tasks/Task.vue</url>
+          <line>19</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

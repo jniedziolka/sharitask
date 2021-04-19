@@ -24,6 +24,11 @@ class TaskController extends Controller
         return response()->json(json_encode($task));
     }
 
+    public function destroy(Request $request) {
+        $task = Task::find($request->id);
+        $task->delete();
+    }
+
     public function getJsonTasks(Request $request) {
         $tasks = Auth::user()->tasks;
         return json_encode($tasks);

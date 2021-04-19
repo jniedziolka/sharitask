@@ -4,6 +4,7 @@
             v-for="(task, index) in tasks"
             :title="task.title"
             :due_date="task.due_date"
+            :id="task.id"
             :key="task.id"
         />
     </div>

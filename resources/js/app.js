@@ -5,7 +5,10 @@ import { App, plugin } from '@inertiajs/inertia-vue';
 import store from '@/Store/index';
 import Vue from 'vue';
 
+
 Vue.use(plugin);
+
+Vue.mixin({ methods: { route }});
 
 const el = document.getElementById('app');
 
