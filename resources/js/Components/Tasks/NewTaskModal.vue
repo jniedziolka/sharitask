@@ -14,8 +14,7 @@
                 <div class="flex flex-col mb-6">
                     <label for="visibility">Visibility</label>
                     <select id="visibility" v-model="form.visibility" class="border-gray-300 text-gray-700 rounded shadow focus:ring-2 focus:ring-gray-500 focus:border-transparent">
-                        <option value="0" class="hover:bg-gray-100">Private</option>
-                        <option value="1">Public</option>
+                        <option v-for="taskVisibility in taskVisibilities" :value="taskVisibility.id" v-html="taskVisibility.visibility"></option>
                     </select>
                 </div>
                 <div class="flex flex-col mb-6">
@@ -40,6 +39,11 @@
                     date: null
                 }
             }
+        },
+        computed: {
+          taskVisibilities() {
+              return this.$store.state.task.taskVisibilities;
+          }
         },
         methods: {
             async submit() {

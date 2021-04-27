@@ -23,7 +23,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TaskController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/Components/Tasks/Task.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Components/Tasks/Task.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Components/AppHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Components/AppHeader.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Components/Auth/LoginForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Components/Auth/LoginForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Components/Tasks/NewTaskModal.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Components/Tasks/NewTaskModal.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/Components/Tasks/TaskList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Components/Tasks/TaskList.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/Store/Modules/task.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Store/Modules/task.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
@@ -239,7 +241,10 @@
       <workItem from="1618568567576" duration="2855000" />
       <workItem from="1618671515486" duration="15319000" />
       <workItem from="1618776724335" duration="6146000" />
-      <workItem from="1618815879010" duration="17824000" />
+      <workItem from="1618815879010" duration="17916000" />
+      <workItem from="1618855951042" duration="605000" />
+      <workItem from="1618932917128" duration="20000" />
+      <workItem from="1619555108198" duration="2058000" />
     </task>
     <servers />
   </component>
@@ -257,16 +262,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/resources/js/Components/Tasks/Task.vue</url>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

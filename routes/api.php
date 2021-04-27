@@ -21,4 +21,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::middleware('auth:sanctum')->group(function() {
+   Route::get('/jsonTasks', [TaskController::class, 'getJsonTasks'])->name('task.getJsonTasks');
+   Route::get('/taskStatuses', [TaskController::class, 'getTaskStatuses'])->name('task.getTaskStatuses');
+   Route::get('/taskVisibilities', [TaskController::class, 'getTaskVisibilities'])->name('task.getTaskVisibilities');
+});
+
 Route::middleware('auth:sanctum')->get('/jsonTasks', [TaskController::class, 'getJsonTasks'])->name('task.getJsonTasks');

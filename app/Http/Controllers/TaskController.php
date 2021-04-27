@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class TaskController extends Controller
 {
@@ -33,5 +34,15 @@ class TaskController extends Controller
     public function getJsonTasks(Request $request) {
         $tasks = Auth::user()->tasks;
         return json_encode($tasks);
+    }
+
+    public function getTaskStatuses(Request $request) {
+        $taskStatuses = DB::table('dic_task_statuses')->get();
+        return json_encode($taskStatuses);
+    }
+
+    public function getTaskVisibilities(Request $request) {
+        $taskVisibilities = DB::table('dic_task_visibilities')->get();
+        return json_encode($taskVisibilities);
     }
 }

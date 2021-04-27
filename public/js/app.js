@@ -2152,11 +2152,13 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     submit: function submit() {
-      console.log("STORE", this.$store);
+      var _this = this;
+
       this.$inertia.post('/login', this.form, {
         onSuccess: function onSuccess(_ref) {
           var props = _ref.props;
-          store.commit('setUserInfo', {
+
+          _this.$store.commit('setUserInfo', {
             first_name: props.user.first_name,
             last_name: props.user.last_name,
             nickname: props.user.nickname,
@@ -2337,7 +2339,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ['isModalOpened'],
   data: function data() {
@@ -2349,6 +2350,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         date: null
       }
     };
+  },
+  computed: {
+    taskVisibilities: function taskVisibilities() {
+      return this.$store.state.task.taskVisibilities;
+    }
   },
   methods: {
     submit: function submit() {
@@ -2507,6 +2513,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   mounted: function mounted() {
     this.$store.dispatch('fetchTasks');
+    this.$store.dispatch('fetchTasksStatuses');
+    this.$store.dispatch('fetchTasksVisibilities');
   },
   components: {
     Task: _Components_Tasks_Task__WEBPACK_IMPORTED_MODULE_0__.default
@@ -2709,6 +2717,12 @@ var taskModule = {
         return task.id === payload.id;
       });
       state.tasks.splice(index, 1);
+    },
+    setTasksStatuses: function setTasksStatuses(state, payload) {
+      state.taskStatuses = payload.taskStatuses;
+    },
+    setTasksVisibilities: function setTasksVisibilities(state, payload) {
+      state.taskVisibilities = payload.taskVisibilities;
     }
   },
   actions: {
@@ -2743,6 +2757,72 @@ var taskModule = {
             }
           }
         }, _callee, null, [[1, 8]]);
+      }))();
+    },
+    fetchTasksStatuses: function fetchTasksStatuses(_ref2) {
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
+        var commit, response;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                commit = _ref2.commit;
+                _context2.prev = 1;
+                _context2.next = 4;
+                return axios.get(route('task.getTaskStatuses'));
+
+              case 4:
+                response = _context2.sent;
+                commit('setTasksStatuses', {
+                  taskStatuses: response.data
+                });
+                _context2.next = 11;
+                break;
+
+              case 8:
+                _context2.prev = 8;
+                _context2.t0 = _context2["catch"](1);
+                console.error(_context2.t0);
+
+              case 11:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2, null, [[1, 8]]);
+      }))();
+    },
+    fetchTasksVisibilities: function fetchTasksVisibilities(_ref3) {
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee3() {
+        var commit, response;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee3$(_context3) {
+          while (1) {
+            switch (_context3.prev = _context3.next) {
+              case 0:
+                commit = _ref3.commit;
+                _context3.prev = 1;
+                _context3.next = 4;
+                return axios.get(route('task.getTaskVisibilities'));
+
+              case 4:
+                response = _context3.sent;
+                commit('setTasksVisibilities', {
+                  taskVisibilities: response.data
+                });
+                _context3.next = 11;
+                break;
+
+              case 8:
+                _context3.prev = 8;
+                _context3.t0 = _context3["catch"](1);
+                console.error(_context3.t0);
+
+              case 11:
+              case "end":
+                return _context3.stop();
+            }
+          }
+        }, _callee3, null, [[1, 8]]);
       }))();
     }
   }
@@ -23709,7 +23789,12 @@ var render = function() {
                 "inertia-link",
                 {
                   staticClass: "bg-gray-200 py-2 px-4 rounded",
-                  attrs: { type: "button", href: "/logout", method: "post" }
+                  attrs: {
+                    as: "button",
+                    type: "button",
+                    href: "/logout",
+                    method: "post"
+                  }
                 },
                 [_vm._v("Logout")]
               )
@@ -23780,7 +23865,7 @@ var render = function() {
               ],
               staticClass:
                 "border-purple-300 text-gray-700 rounded shadow focus:ring-2 focus:ring-purple-500 focus:border-transparent",
-              attrs: { id: "email", type: "text" },
+              attrs: { id: "email", type: "text", autocomplete: "usernmae" },
               domProps: { value: _vm.form.email },
               on: {
                 input: function($event) {
@@ -23814,7 +23899,11 @@ var render = function() {
               ],
               staticClass:
                 "border-purple-300 rounded shadow focus:ring-2 focus:ring-purple-500 focus:border-transparent",
-              attrs: { id: "password", type: "password" },
+              attrs: {
+                id: "password",
+                type: "password",
+                autocomplete: "current-password"
+              },
               domProps: { value: _vm.form.password },
               on: {
                 input: function($event) {
@@ -24356,18 +24445,15 @@ var render = function() {
                       }
                     }
                   },
-                  [
-                    _c(
-                      "option",
-                      {
-                        staticClass: "hover:bg-gray-100",
-                        attrs: { value: "0" }
-                      },
-                      [_vm._v("Private")]
-                    ),
-                    _vm._v(" "),
-                    _c("option", { attrs: { value: "1" } }, [_vm._v("Public")])
-                  ]
+                  _vm._l(_vm.taskVisibilities, function(taskVisibility) {
+                    return _c("option", {
+                      domProps: {
+                        value: taskVisibility.id,
+                        innerHTML: _vm._s(taskVisibility.visibility)
+                      }
+                    })
+                  }),
+                  0
                 )
               ]),
               _vm._v(" "),

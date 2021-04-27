@@ -8,7 +8,7 @@
         </nav>
         <div class="flex">
             <new-task-button />
-            <inertia-link type="button" href="/logout" method="post" v-if="user" class="bg-gray-200 py-2 px-4 rounded">Logout</inertia-link>
+            <inertia-link as="button" type="button" href="/logout" method="post" v-if="user" class="bg-gray-200 py-2 px-4 rounded">Logout</inertia-link>
         </div>
     </header>
 </template>

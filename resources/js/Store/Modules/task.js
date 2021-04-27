@@ -17,6 +17,12 @@ const taskModule = {
         removeTaskFromTheList (state, payload) {
             const index = state.tasks.findIndex(task => task.id === payload.id);
             state.tasks.splice(index, 1);
+        },
+        setTasksStatuses (state, payload) {
+            state.taskStatuses = payload.taskStatuses
+        },
+        setTasksVisibilities (state, payload) {
+            state.taskVisibilities = payload.taskVisibilities;
         }
     },
     actions: {
@@ -30,6 +36,26 @@ const taskModule = {
                 console.error(error);
             }
         },
+        async fetchTasksStatuses ({ commit }) {
+            try {
+                const response = await axios.get(route('task.getTaskStatuses'));
+                commit('setTasksStatuses', {
+                    taskStatuses: response.data
+                });
+            } catch (error) {
+                console.error(error);
+            }
+        },
+        async fetchTasksVisibilities ({ commit }) {
+            try {
+                const response = await axios.get(route('task.getTaskVisibilities'));
+                commit('setTasksVisibilities', {
+                    taskVisibilities: response.data
+                });
+            } catch (error) {
+                console.error(error);
+            }
+        }
     }
 };
 
