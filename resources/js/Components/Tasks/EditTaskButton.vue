@@ -1,22 +1,23 @@
 <template>
     <div>
-        <button type="button" class="bg-gray-400 py-2 px-4 rounded mr-4" @click="openModal">
-            Create Task
+        <button type="button" class="bg-gray-300 py-2 px-4 rounded mr-4" @click="openModal">
+            Edit
         </button>
         <portal>
-            <new-task-modal :isModalOpened="isModalOpened" @close="closeModal" />
+            <edit-task-modal :isModalOpened="isModalOpened" @close="closeModal" :task="task"/>
         </portal>
     </div>
 </template>
 
 <script>
-    import NewTaskModal from "@/Components/Tasks/NewTaskModal";
+    import EditTaskModal from "@/Components/Tasks/EditTaskModal";
     import { Portal } from "@linusborg/vue-simple-portal";
 
     export default {
+        props: ['task'],
         components: {
             Portal,
-            NewTaskModal
+            EditTaskModal
         },
         data() {
             return {
@@ -25,10 +26,10 @@
         },
         methods: {
             openModal() {
-                this.isModalOpened = true
+                this.isModalOpened = true;
             },
             closeModal() {
-                this.isModalOpened = false
+                this.isModalOpened = false;
             }
         }
     }

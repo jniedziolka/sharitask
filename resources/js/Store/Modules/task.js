@@ -14,6 +14,10 @@ const taskModule = {
         addTaskToList (state, payload) {
             state.tasks = [...state.tasks, JSON.parse(payload.task)];
         },
+        editTask (state, payload) {
+            const index = state.tasks.findIndex(task => task.id === payload.id);
+
+        },
         removeTaskFromTheList (state, payload) {
             const index = state.tasks.findIndex(task => task.id === payload.id);
             state.tasks.splice(index, 1);

@@ -3,6 +3,7 @@
         <task
             v-for="(task, index) in tasks"
             :title="task.title"
+            :description="task.description"
             :due_date="task.due_date"
             :status="task.status"
             :id="task.id"

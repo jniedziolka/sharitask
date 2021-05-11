@@ -25,6 +25,15 @@ class TaskController extends Controller
         return response()->json(json_encode($task));
     }
 
+    public function update(Request $request) {
+        $task = Task::find($request->id);
+        $task->title = $request->title;
+        $task->description = $request->description;
+        $task->save();
+
+        return response()->json(json_encode($task));
+    }
+
     public function destroy(Request $request) {
         $task = Task::find($request->id);
         $task->delete();
