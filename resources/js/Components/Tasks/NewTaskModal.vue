@@ -46,16 +46,11 @@
           }
         },
         methods: {
-            async submit() {
-                try {
-                    const response = await axios.post('/task', this.form);
-                    this.$store.commit('addTaskToList', {
-                        task: response.data
-                    });
-                    this.$emit('close');
-                } catch (err) {
-                    console.log(err);
-                }
+            submit() {
+                this.$store.dispatch('storeTask', {
+                    task: this.form
+                });
+                this.$emit('close');
             }
         }
     }

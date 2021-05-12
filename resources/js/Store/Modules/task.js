@@ -1,3 +1,5 @@
+import route from 'ziggy';
+
 const taskModule = {
     state: () => ({
         tasks: null,
@@ -11,21 +13,10 @@ const taskModule = {
         setTasks (state, payload) {
             state.tasks = payload.tasks;
         },
-        addTaskToList (state, payload) {
-            state.tasks = [...state.tasks, JSON.parse(payload.task)];
-        },
-        editTask (state, payload) {
-            const index = state.tasks.findIndex(task => task.id === payload.id);
-
-        },
-        removeTaskFromTheList (state, payload) {
-            const index = state.tasks.findIndex(task => task.id === payload.id);
-            state.tasks.splice(index, 1);
-        },
-        setTasksStatuses (state, payload) {
+        setTaskStatuses (state, payload) {
             state.taskStatuses = payload.taskStatuses
         },
-        setTasksVisibilities (state, payload) {
+        setTaskVisibilities (state, payload) {
             state.taskVisibilities = payload.taskVisibilities;
         }
     },
@@ -40,24 +31,53 @@ const taskModule = {
                 console.error(error);
             }
         },
-        async fetchTasksStatuses ({ commit }) {
+        async fetchTaskStatuses ({ commit }) {
             try {
                 const response = await axios.get(route('task.getTaskStatuses'));
-                commit('setTasksStatuses', {
+                commit('setTaskStatuses', {
                     taskStatuses: response.data
                 });
             } catch (error) {
                 console.error(error);
             }
         },
-        async fetchTasksVisibilities ({ commit }) {
+        async fetchTaskVisibilities ({ commit }) {
             try {
                 const response = await axios.get(route('task.getTaskVisibilities'));
-                commit('setTasksVisibilities', {
+                commit('setTaskVisibilities', {
                     taskVisibilities: response.data
                 });
             } catch (error) {
                 console.error(error);
+            }
+        },
+        async storeTask({ dispatch }, { task }) {
+            try {
+                await axios.post(route('task.store'), {
+                    title: task.title,
+                    description: task.description,
+                    visibility: task.visibility,
+                    date: task.date
+                });
+                dispatch('fetchTasks');
+            } catch (err) {
+                console.error(err);
+            }
+        },
+        async editTask({ dispatch }, { task }) {
+            try {
+                await axios.put(route('task.update'), task);
+                dispatch('fetchTasks');
+            } catch (err) {
+                console.error(err);
+            }
+        },
+        async deleteTask({ dispatch }, { id }) {
+            try {
+                await axios.delete(route('task.destroy', id));
+                dispatch('fetchTasks');
+            } catch (err) {
+                console.error(err);
             }
         }
     }

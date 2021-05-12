@@ -2303,14 +2303,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-
-
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
 //
 //
 //
@@ -2360,42 +2352,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   },
   methods: {
     submit: function submit() {
-      var _this = this;
-
-      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
-        var response;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                _context.prev = 0;
-                _context.next = 3;
-                return axios.put('/task', _this.form);
-
-              case 3:
-                response = _context.sent;
-
-                _this.$store.commit('editTask', {
-                  task: response.data
-                });
-
-                _this.$emit('close');
-
-                _context.next = 11;
-                break;
-
-              case 8:
-                _context.prev = 8;
-                _context.t0 = _context["catch"](0);
-                console.log(_context.t0);
-
-              case 11:
-              case "end":
-                return _context.stop();
-            }
-          }
-        }, _callee, null, [[0, 8]]);
-      }))();
+      this.$store.dispatch('editTask', {
+        task: this.form
+      });
+      this.$emit('close');
     }
   }
 });
@@ -2461,14 +2421,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-
-
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
 //
 //
 //
@@ -2517,42 +2469,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   },
   methods: {
     submit: function submit() {
-      var _this = this;
-
-      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
-        var response;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                _context.prev = 0;
-                _context.next = 3;
-                return axios.post('/task', _this.form);
-
-              case 3:
-                response = _context.sent;
-
-                _this.$store.commit('addTaskToList', {
-                  task: response.data
-                });
-
-                _this.$emit('close');
-
-                _context.next = 11;
-                break;
-
-              case 8:
-                _context.prev = 8;
-                _context.t0 = _context["catch"](0);
-                console.log(_context.t0);
-
-              case 11:
-              case "end":
-                return _context.stop();
-            }
-          }
-        }, _callee, null, [[0, 8]]);
-      }))();
+      this.$store.dispatch('storeTask', {
+        task: this.form
+      });
+      this.$emit('close');
     }
   }
 });
@@ -2570,17 +2490,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Components_Tasks_EditTaskButton__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/Components/Tasks/EditTaskButton */ "./resources/js/Components/Tasks/EditTaskButton.vue");
-/* harmony import */ var ziggy__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ziggy */ "./vendor/tightenco/ziggy/dist/index.js");
-/* harmony import */ var ziggy__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(ziggy__WEBPACK_IMPORTED_MODULE_2__);
-
-
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
+/* harmony import */ var _Components_Tasks_EditTaskButton__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/Components/Tasks/EditTaskButton */ "./resources/js/Components/Tasks/EditTaskButton.vue");
+/* harmony import */ var ziggy__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ziggy */ "./vendor/tightenco/ziggy/dist/index.js");
+/* harmony import */ var ziggy__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(ziggy__WEBPACK_IMPORTED_MODULE_1__);
 //
 //
 //
@@ -2611,7 +2523,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ['title', 'description', 'due_date', 'status', 'visibility', 'id'],
   components: {
-    EditTaskButton: _Components_Tasks_EditTaskButton__WEBPACK_IMPORTED_MODULE_1__.default
+    EditTaskButton: _Components_Tasks_EditTaskButton__WEBPACK_IMPORTED_MODULE_0__.default
   },
   data: function data() {
     return {
@@ -2620,40 +2532,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   },
   methods: {
     handleTaskDelete: function handleTaskDelete() {
-      var _this = this;
-
-      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
-        var response;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                _context.prev = 0;
-                _context.next = 3;
-                return axios["delete"](ziggy__WEBPACK_IMPORTED_MODULE_2___default()('task.destroy', _this.id));
-
-              case 3:
-                response = _context.sent;
-
-                _this.$store.commit('removeTaskFromTheList', {
-                  id: _this.id
-                });
-
-                _context.next = 10;
-                break;
-
-              case 7:
-                _context.prev = 7;
-                _context.t0 = _context["catch"](0);
-                console.log(_context.t0);
-
-              case 10:
-              case "end":
-                return _context.stop();
-            }
-          }
-        }, _callee, null, [[0, 7]]);
-      }))();
+      this.$store.dispatch('deleteTask', {
+        id: this.id
+      });
     }
   },
   computed: {
@@ -2726,8 +2607,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   mounted: function mounted() {
     this.$store.dispatch('fetchTasks');
-    this.$store.dispatch('fetchTasksStatuses');
-    this.$store.dispatch('fetchTasksVisibilities');
+    this.$store.dispatch('fetchTaskStatuses');
+    this.$store.dispatch('fetchTaskVisibilities');
   },
   components: {
     Task: _Components_Tasks_Task__WEBPACK_IMPORTED_MODULE_0__.default
@@ -2889,23 +2770,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var ziggy__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ziggy */ "./vendor/tightenco/ziggy/dist/index.js");
+/* harmony import */ var ziggy__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(ziggy__WEBPACK_IMPORTED_MODULE_1__);
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
 var taskModule = {
   state: function state() {
@@ -2922,24 +2794,10 @@ var taskModule = {
     setTasks: function setTasks(state, payload) {
       state.tasks = payload.tasks;
     },
-    addTaskToList: function addTaskToList(state, payload) {
-      state.tasks = [].concat(_toConsumableArray(state.tasks), [JSON.parse(payload.task)]);
-    },
-    editTask: function editTask(state, payload) {
-      var index = state.tasks.findIndex(function (task) {
-        return task.id === payload.id;
-      });
-    },
-    removeTaskFromTheList: function removeTaskFromTheList(state, payload) {
-      var index = state.tasks.findIndex(function (task) {
-        return task.id === payload.id;
-      });
-      state.tasks.splice(index, 1);
-    },
-    setTasksStatuses: function setTasksStatuses(state, payload) {
+    setTaskStatuses: function setTaskStatuses(state, payload) {
       state.taskStatuses = payload.taskStatuses;
     },
-    setTasksVisibilities: function setTasksVisibilities(state, payload) {
+    setTaskVisibilities: function setTaskVisibilities(state, payload) {
       state.taskVisibilities = payload.taskVisibilities;
     }
   },
@@ -2954,7 +2812,7 @@ var taskModule = {
                 commit = _ref.commit;
                 _context.prev = 1;
                 _context.next = 4;
-                return axios.get(route('task.getJsonTasks'));
+                return axios.get(ziggy__WEBPACK_IMPORTED_MODULE_1___default()('task.getJsonTasks'));
 
               case 4:
                 response = _context.sent;
@@ -2977,7 +2835,7 @@ var taskModule = {
         }, _callee, null, [[1, 8]]);
       }))();
     },
-    fetchTasksStatuses: function fetchTasksStatuses(_ref2) {
+    fetchTaskStatuses: function fetchTaskStatuses(_ref2) {
       return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
         var commit, response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
@@ -2987,11 +2845,11 @@ var taskModule = {
                 commit = _ref2.commit;
                 _context2.prev = 1;
                 _context2.next = 4;
-                return axios.get(route('task.getTaskStatuses'));
+                return axios.get(ziggy__WEBPACK_IMPORTED_MODULE_1___default()('task.getTaskStatuses'));
 
               case 4:
                 response = _context2.sent;
-                commit('setTasksStatuses', {
+                commit('setTaskStatuses', {
                   taskStatuses: response.data
                 });
                 _context2.next = 11;
@@ -3010,7 +2868,7 @@ var taskModule = {
         }, _callee2, null, [[1, 8]]);
       }))();
     },
-    fetchTasksVisibilities: function fetchTasksVisibilities(_ref3) {
+    fetchTaskVisibilities: function fetchTaskVisibilities(_ref3) {
       return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee3() {
         var commit, response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee3$(_context3) {
@@ -3020,11 +2878,11 @@ var taskModule = {
                 commit = _ref3.commit;
                 _context3.prev = 1;
                 _context3.next = 4;
-                return axios.get(route('task.getTaskVisibilities'));
+                return axios.get(ziggy__WEBPACK_IMPORTED_MODULE_1___default()('task.getTaskVisibilities'));
 
               case 4:
                 response = _context3.sent;
-                commit('setTasksVisibilities', {
+                commit('setTaskVisibilities', {
                   taskVisibilities: response.data
                 });
                 _context3.next = 11;
@@ -3041,6 +2899,104 @@ var taskModule = {
             }
           }
         }, _callee3, null, [[1, 8]]);
+      }))();
+    },
+    storeTask: function storeTask(_ref4, _ref5) {
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee4() {
+        var dispatch, task;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee4$(_context4) {
+          while (1) {
+            switch (_context4.prev = _context4.next) {
+              case 0:
+                dispatch = _ref4.dispatch;
+                task = _ref5.task;
+                _context4.prev = 2;
+                _context4.next = 5;
+                return axios.post(ziggy__WEBPACK_IMPORTED_MODULE_1___default()('task.store'), {
+                  title: task.title,
+                  description: task.description,
+                  visibility: task.visibility,
+                  date: task.date
+                });
+
+              case 5:
+                dispatch('fetchTasks');
+                _context4.next = 11;
+                break;
+
+              case 8:
+                _context4.prev = 8;
+                _context4.t0 = _context4["catch"](2);
+                console.error(_context4.t0);
+
+              case 11:
+              case "end":
+                return _context4.stop();
+            }
+          }
+        }, _callee4, null, [[2, 8]]);
+      }))();
+    },
+    editTask: function editTask(_ref6, _ref7) {
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee5() {
+        var dispatch, task;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee5$(_context5) {
+          while (1) {
+            switch (_context5.prev = _context5.next) {
+              case 0:
+                dispatch = _ref6.dispatch;
+                task = _ref7.task;
+                _context5.prev = 2;
+                _context5.next = 5;
+                return axios.put(ziggy__WEBPACK_IMPORTED_MODULE_1___default()('task.update'), task);
+
+              case 5:
+                dispatch('fetchTasks');
+                _context5.next = 11;
+                break;
+
+              case 8:
+                _context5.prev = 8;
+                _context5.t0 = _context5["catch"](2);
+                console.error(_context5.t0);
+
+              case 11:
+              case "end":
+                return _context5.stop();
+            }
+          }
+        }, _callee5, null, [[2, 8]]);
+      }))();
+    },
+    deleteTask: function deleteTask(_ref8, _ref9) {
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee6() {
+        var dispatch, id;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee6$(_context6) {
+          while (1) {
+            switch (_context6.prev = _context6.next) {
+              case 0:
+                dispatch = _ref8.dispatch;
+                id = _ref9.id;
+                _context6.prev = 2;
+                _context6.next = 5;
+                return axios["delete"](ziggy__WEBPACK_IMPORTED_MODULE_1___default()('task.destroy', id));
+
+              case 5:
+                dispatch('fetchTasks');
+                _context6.next = 11;
+                break;
+
+              case 8:
+                _context6.prev = 8;
+                _context6.t0 = _context6["catch"](2);
+                console.error(_context6.t0);
+
+              case 11:
+              case "end":
+                return _context6.stop();
+            }
+          }
+        }, _callee6, null, [[2, 8]]);
       }))();
     }
   }

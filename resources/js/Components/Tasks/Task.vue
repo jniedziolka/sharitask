@@ -38,13 +38,10 @@
             }
         },
         methods: {
-            async handleTaskDelete() {
-                try {
-                    const response = await axios.delete(route('task.destroy', this.id));
-                    this.$store.commit('removeTaskFromTheList', {id: this.id});
-                } catch (err) {
-                    console.log(err);
-                }
+            handleTaskDelete() {
+                this.$store.dispatch('deleteTask', {
+                    id: this.id
+                });
             }
         },
         computed: {

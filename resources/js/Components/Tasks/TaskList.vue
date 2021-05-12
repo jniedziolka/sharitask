@@ -18,8 +18,8 @@
     export default {
         mounted() {
             this.$store.dispatch('fetchTasks');
-            this.$store.dispatch('fetchTasksStatuses');
-            this.$store.dispatch('fetchTasksVisibilities');
+            this.$store.dispatch('fetchTaskStatuses');
+            this.$store.dispatch('fetchTaskVisibilities');
         },
         components: {
             Task

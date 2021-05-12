@@ -47,16 +47,11 @@
             }
         },
         methods: {
-            async submit() {
-                try {
-                    const response = await axios.put('/task', this.form);
-                    this.$store.commit('editTask', {
-                        task: response.data
-                    });
-                    this.$emit('close');
-                } catch (err) {
-                    console.log(err);
-                }
+            submit() {
+                this.$store.dispatch('editTask', {
+                    task: this.form
+                });
+                this.$emit('close');
             }
         }
     }
